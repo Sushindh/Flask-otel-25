@@ -89,7 +89,7 @@ Visualize duration and spans in Jaeger UI
 🔗 API Endpoints
 Method	Endpoint	Description	Observability
 GET	/	Returns Hello Message	✅ Metrics
-GET	/create	Simulates work + trace	✅ Trace + Metrics
+GET	/create	Simulates work  Metrics
 GET	/health	Health check	✅ Status Only
 
 📜 OpenTelemetry Collector Config
