@@ -70,7 +70,8 @@ docker-compose up --build
 
 Wait for a few seconds until all services are running.
 
-🌐 URLs for Services| Tool           | URL                      | Description         |
+🌐 URLs for Services
+| Tool           | URL                      | Description         |
 |----------------|---------------------------|---------------------|
 | 🧪 Flask App    | http://localhost:5000     | Base endpoint       |
 | 📈 Prometheus   | http://localhost:9090     | Metrics dashboard   |
