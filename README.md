@@ -70,10 +70,10 @@ docker-compose up --build
 
 Wait for a few seconds until all services are running.
 
-🌐 URLs for Services
-Tool	URL	Description
-🧪 Flask App	http://localhost:5000	Base endpoint
-📈 Prometheus	http://localhost:9090	Metrics dashboard
+🌐 URLs for Services| Tool           | URL                      | Description         |
+|----------------|---------------------------|---------------------|
+| 🧪 Flask App    | http://localhost:5000     | Base endpoint       |
+| 📈 Prometheus   | http://localhost:9090     | Metrics dashboard   |
 
 📡 Observability Features
 📊 Metrics (via Prometheus)
@@ -81,16 +81,12 @@ Total requests counter by endpoint
 
 Scraped using the OTEL collector at /metrics
 
-📈 Traces (via Jaeger)
-Endpoint /create is traced
-
-Visualize duration and spans in Jaeger UI
-
 🔗 API Endpoints
-Method	Endpoint	Description	Observability
-GET	/	Returns Hello Message	✅ Metrics
-GET	/create	Simulates work  Metrics
-GET	/health	Health check	✅ Status Only
+| Method | Endpoint   | Description             | Observability     |
+|--------|------------|-------------------------|-------------------|
+| GET    | `/`        | Returns Hello Message   | ✅ Metrics         |
+| GET    | `/create`  | Simulates work + Metrics| ✅ Metrics         |
+| GET    | `/health`  | Health check            | ✅ Status Only     |
 
 📜 OpenTelemetry Collector Config
 The collector listens on:
@@ -98,8 +94,6 @@ The collector listens on:
 4318 for OTLP/HTTP (from Flask)
 
 Exports:
-
-Traces → Jaeger (4317)
 
 Metrics → Prometheus (:9464)
 
@@ -112,8 +106,6 @@ Prometheus is configured to scrape metrics from the OTEL Collector's Prometheus 
 📦 OpenTelemetry – Metrics + Tracing instrumentation
 
 📊 Prometheus – Metrics collection
-
-🎯 Jaeger – Distributed Tracing
 
 🐳 Docker Compose – Service orchestration
 
